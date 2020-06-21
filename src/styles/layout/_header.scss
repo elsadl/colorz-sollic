@@ -3,25 +3,14 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
-  padding: $padding * 1.5 $padding;
+  padding: $padding * 1.5 $padding/2;
 
   .logo {
     max-width: 220px;
     text-align: center;
-    z-index: 10;
-
-    @include min($screen-sm) {
-      padding-right: $padding;
-      text-align: left;
-      max-width: 400px;
-    }
 
     img {
-      width: 160px;
-
-      @include min($screen-sm) {
-        width: 100px;
-      }
+      width: 120px;
     }
 
     p {
@@ -30,13 +19,23 @@ header {
     }
   }
 
-  .search-sm {
-    z-index: 10;
+  @include min($screen-sm) {
+    padding: $padding * 1.5 $padding;
+
+    .logo {
+      padding-right: $padding;
+      text-align: left;
+      max-width: 400px;
+
+      img {
+        width: 100px;
+      }
+    }
   }
 
   .burger {
-    height: 70px;
-    width: 50px;
+    height: 60px;
+    width: 40px;
     position: relative;
     z-index: 10;
 

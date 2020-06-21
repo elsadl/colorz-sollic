@@ -60,15 +60,19 @@
     &:hover {
       box-shadow: 5px 10px 27px rgba(0, 0, 0, 0.7);
     }
+
+    @include max($screen-sm) {
+      padding: $padding/2 $padding * 1.25;
+    }
   }
 }
 
 .main-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: $padding;
-    padding: $padding;
-    position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: $padding;
+  padding: $padding;
+  position: relative;
   @include min($screen-lg) {
     top: -10vh;
     margin-bottom: -10vh;
