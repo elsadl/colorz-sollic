@@ -1,0 +1,16 @@
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+
+body {
+  background-color: $background;
+}
+
+.wrapper {
+  background-color: $white;
+  max-width: 1200px;
+  margin: 0 auto;
+  @include min($screen-lg) {
+    width: 90vw;
+  }
+}
