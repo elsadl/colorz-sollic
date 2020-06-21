@@ -39,7 +39,7 @@ footer {
     p {
       padding-top: 10px;
       color: $lightgrey;
-      line-height: 1.4em;
+      line-height: $lineheight;
     }
   }
 
@@ -67,7 +67,7 @@ footer {
     padding-bottom: $padding;
   }
   a {
-    line-height: 1.4em;
+    line-height: $lineheight;
     transition: all 200ms ease-in-out;
 
     &:hover {
