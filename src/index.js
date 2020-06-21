@@ -5,10 +5,8 @@ let nav = document.querySelector("header nav");
 
 let ready = () => {
   burger.addEventListener("click", (e) => {
-    console.log(burger);
     burger.classList.toggle("burger-closed");
     burger.classList.toggle("burger-open");
-
     nav.classList.toggle("nav-open");
   });
 };
