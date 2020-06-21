@@ -64,11 +64,11 @@
 }
 
 .main-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: $padding;
-  padding: $padding;
-  position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: $padding;
+    padding: $padding;
+    position: relative;
   @include min($screen-lg) {
     top: -10vh;
     margin-bottom: -10vh;

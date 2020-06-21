@@ -11,12 +11,22 @@ footer {
   p {
     padding: $padding 0;
   }
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $padding;
+  padding: $padding;
+  border-bottom: 1px solid $lightgrey;
 
   .logo {
     max-width: 260px;
     text-align: center;
+    grid-column: span 2;
+    margin: 0 auto;
 
-    @include min($screen-md) {
+    @include min($screen-lg) {
       margin-right: 3vw;
     }
 
@@ -32,43 +42,36 @@ footer {
       line-height: 1.4em;
     }
   }
-}
 
-.footer-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: $padding 0;
-  border-bottom: 1px solid $lightgrey;
+  @include min($screen-sm) {
+    grid-template-columns: repeat(4, 1fr);
 
-  @include max($screen-md) {
-    flex-direction: column;
-  }
-}
-
-.footer-links {
-  display: grid;
-  grid-gap: 4vw;
-  grid-template-columns: repeat(4, 1fr);
-
-  @include max($screen-sm) {
-    grid-gap: 10vw;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-links-element {
-    h4 {
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding-bottom: $padding;
+    .logo {
+      grid-column: span 4;
     }
-    a {
-      line-height: 1.4em;
-      transition: all 200ms ease-in-out;
+  }
 
-      &:hover {
-        color: $lightgrey;
-      }
+  @include min($screen-lg) {
+    grid-template-columns: repeat(6, 1fr);
+
+    .logo {
+      grid-column: span 2;
+    }
+  }
+}
+
+.footer-links-element {
+  h4 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: $padding;
+  }
+  a {
+    line-height: 1.4em;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      color: $lightgrey;
     }
   }
 }
