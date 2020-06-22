@@ -1,4 +1,4 @@
-# test intégration Colorz
+# test intégration Sollic
 
 ## Building and running on localhost
 
