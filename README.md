@@ -1,4 +1,4 @@
-# test-colorz
+# test intégration Colorz
 
 ## Building and running on localhost
 
